@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bag"
+    tools:context=".EncryptionActivity">
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/text1"
+        android:layout_width="match_parent"
+        android:layout_height="53dp"
+        android:layout_marginTop="105dp"
+        android:textColorHint="@color/colorPrimaryDark"
+        app:hintTextAppearance="@style/MyAppearance">
+        <EditText
+            android:id="@+id/text"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="70dp"
+            android:drawablePadding="10dp"
+            android:drawableStart="@drawable/ic_textsms_black_24dp"
+            android:hint="Message"
+            android:inputType="text"
+            android:padding="10dp"
+            android:textColor="@color/colorPrimary"
+            android:textColorHint="@color/colorPrimary" />
+    </android.support.design.widget.TextInputLayout>
+
+    <Button
+        android:layout_marginTop="60dp"
+        android:id="@+id/encrypt"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/text1"
+        android:enabled="false"
+        android:layout_width="300dp"
+        android:textColor="@color/colorAccent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/style_layout"
+        android:text="Submit"/>
+      <RelativeLayout
+        android:id="@+id/rel"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="45dp"
+        android:layout_below="@id/encrypt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+          <ImageView
+              android:id="@+id/img2"
+              android:layout_marginLeft="25dp"
+              android:layout_marginTop="20dp"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_alignParentLeft="true"
+              android:src="@drawable/ic_lock_outline_black_1_24dp" />
+          <TextView
+              android:layout_toRightOf="@+id/img2"
+              android:id="@+id/result1"
+              android:layout_centerHorizontal="true"
+              android:layout_width="300dp"
+              android:padding="5dp"
+              android:text="Encrypted Message"
+              android:textSize="20dp"
+              android:textColor="@color/colorPrimaryDark"
+              android:layout_height="40dp" />
+      <TextView
+          android:layout_toRightOf="@+id/img2"
+           android:id="@+id/result"
+           android:padding="5dp"
+           android:scrollbars="vertical"
+           android:layout_centerHorizontal="true"
+           android:layout_marginTop="5dp"
+           android:layout_width="300dp"
+           android:textSize="18dp"
+           android:layout_below="@+id/result1"
+           android:textColor="@color/colorPrimaryDark"
+           android:layout_height="wrap_content" />
+     </RelativeLayout>
+</RelativeLayout>
